@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>RideShareLite | Dashboard</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="dashboard"><div class="app"><aside class="sidebar">
+      <div class="brand"><div class="brand-logo">🚗</div><div><b>RideShare</b><small>Lite</small></div></div>
+      <div class="menu-label">MAIN MENU</div>
+      <nav class="nav">
+        <a data-page="dashboard" href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a data-page="users" href="users.html"><span class="nav-icon">👥</span>Users</a>
+        <a data-page="riders" href="riders.html"><span class="nav-icon">🧑</span>Riders</a>
+        <a data-page="rides" href="rides.html"><span class="nav-icon">🚗</span>Ride Offers</a>
+        <a data-page="requests" href="requests.html"><span class="nav-icon">📋</span>Ride Requests</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="menu-label">SYSTEM</div><a class="nav" href="#"><span class="nav-icon">⚙</span>Settings</a></div>
+    </aside><div class="main">
+<header class="topbar"><div class="search">⌕<input placeholder="Search anything..."></div><div class="top-right"><button class="icon-btn">🔔<i class="dot"></i></button><div class="profile"><div class="avatar">A</div><div><b>Admin</b><small>Administrator</small></div></div></div></header>
+<main class="content">
+<section class="hero"><div><div class="eyebrow" style="color:#bfc4ff">RIDE SHARE PLATFORM</div><h2>Good Morning, Admin 👋</h2><p>Manage users, rides and requests from one simple dashboard.</p></div><div class="hero-search"><input id="findDestination" placeholder="Search destination..."><button onclick="location.href='rides.html'">Find Ride →</button></div></section>
+<section class="stats">
+<div class="stat"><div class="stat-top"><div class="stat-icon purple">👥</div><span class="change">LIVE</span></div><h2 id="userCount">--</h2><p>Total Users</p><small>All registered users</small></div>
+<div class="stat"><div class="stat-top"><div class="stat-icon blue">🚗</div><span class="change">LIVE</span></div><h2 id="rideCount">--</h2><p>Ride Offers</p><small>Available ride records</small></div>
+<div class="stat"><div class="stat-top"><div class="stat-icon green">🧑</div><span class="change">LIVE</span></div><h2 id="riderCount">--</h2><p>Riders</p><small>Registered riders</small></div>
+<div class="stat"><div class="stat-top"><div class="stat-icon orange">📋</div><span class="change">LIVE</span></div><h2 id="requestCount">--</h2><p>Requests</p><small>Ride requests</small></div>
+</section>
+<section class="dashboard-grid">
+<div class="panel"><div class="panel-head"><div><h2>Active Ride Offers</h2><p>Latest rides from your platform</p></div><a class="view-link" href="rides.html">View all →</a></div><div id="recentRides" class="ride-list"><div class="empty">Loading rides...</div></div></div>
+<div class="panel"><div class="panel-head"><div><h2>Quick Actions</h2><p>Jump to platform management</p></div></div><div class="quick-grid">
+<a class="quick q1" href="users.html"><span>👥</span><strong>Manage Users</strong><b>Open user management →</b></a>
+<a class="quick q2" href="riders.html"><span>🧑</span><strong>View Riders</strong><b>Manage rider accounts →</b></a>
+<a class="quick q3" href="rides.html"><span>🚗</span><strong>Manage Rides</strong><b>Create or edit rides →</b></a>
+<a class="quick q4" href="requests.html"><span>📋</span><strong>View Requests</strong><b>Manage ride requests →</b></a>
+</div></div></section>
+</main><footer><b>🚗 RideShareLite</b><span>Office & College Carpool Matching Platform</span><span>© 2026</span></footer></div></div><div id="toastContainer" class="toast-container"></div><script src="script.js"></script></body></html>

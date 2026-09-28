@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>RideShareLite | Users</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="users"><div class="app"><aside class="sidebar">
+      <div class="brand"><div class="brand-logo">🚗</div><div><b>RideShare</b><small>Lite</small></div></div>
+      <div class="menu-label">MAIN MENU</div>
+      <nav class="nav">
+        <a data-page="dashboard" href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a data-page="users" href="users.html"><span class="nav-icon">👥</span>Users</a>
+        <a data-page="riders" href="riders.html"><span class="nav-icon">🧑</span>Riders</a>
+        <a data-page="rides" href="rides.html"><span class="nav-icon">🚗</span>Ride Offers</a>
+        <a data-page="requests" href="requests.html"><span class="nav-icon">📋</span>Ride Requests</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="menu-label">SYSTEM</div><a class="nav" href="#"><span class="nav-icon">⚙</span>Settings</a></div>
+    </aside><div class="main">
+<header class="topbar"><div class="search">⌕<input placeholder="Search anything..."></div><div class="top-right"><button class="icon-btn">🔔<i class="dot"></i></button><div class="profile"><div class="avatar">A</div><div><b>Admin</b><small>Administrator</small></div></div></div></header>
+<main class="content">
+<div class="page-head"><div><p class="eyebrow">PLATFORM MANAGEMENT</p><h1>User Management</h1><p>Manage every registered driver and rider.</p></div><button class="btn btn-primary" data-open="userModal">＋ Add User</button></div>
+<section class="stats">
+<div class="stat"><div class="stat-icon purple">👥</div><h2 id="userTotal">--</h2><p>Total Users</p></div><div class="stat"><div class="stat-icon blue">🚗</div><h2 id="driverTotal">--</h2><p>Drivers</p></div><div class="stat"><div class="stat-icon green">🧑</div><h2 id="riderTotal">--</h2><p>Riders</p></div><div class="stat"><div class="stat-icon orange">✓</div><h2>CRUD</h2><p>Full management</p></div>
+</section>
+<div class="panel"><div class="toolbar"><div><b style="font-size:13px">All Users</b><div style="font-size:10px;color:#8992a5;margin-top:4px">Live data from Spring Boot</div></div><input id="userSearch" class="input" placeholder="Search users..."></div><div class="table-wrap"><table class="table"><thead><tr><th>ID</th><th>USER</th><th>EMAIL</th><th>PHONE</th><th>ROLE</th><th>ACTIONS</th></tr></thead><tbody id="userRows"></tbody></table></div></div>
+</main><footer><b>🚗 RideShareLite</b><span>Office & College Carpool Matching Platform</span><span>© 2026</span></footer></div></div>
+<div class="modal-backdrop" id="userModal"><div class="modal"><div class="modal-head"><h3 id="userModalTitle">Add User</h3><button class="close" data-close="userModal">×</button></div><form id="userForm"><div class="modal-body"><input type="hidden" id="userId" name="id"><div class="form-grid"><div class="field"><label>Name</label><input id="userName" name="name" required></div><div class="field"><label>Email</label><input id="userEmail" name="email" type="email" required></div><div class="field"><label>Phone</label><input id="userPhone" name="phone" required></div><div class="field"><label>Role</label><select id="userRole" name="role" required><option value="">Select role</option><option>DRIVER</option><option>RIDER</option></select></div></div></div><div class="modal-foot"><button type="button" class="btn btn-light" data-close="userModal">Cancel</button><button class="btn btn-primary">Save User</button></div></form></div></div>
+<div id="toastContainer" class="toast-container"></div><script src="script.js"></script></body></html>

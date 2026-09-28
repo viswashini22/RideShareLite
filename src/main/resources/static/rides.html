@@ -1,0 +1,21 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>RideShareLite | Ride Offers</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="rides"><div class="app"><aside class="sidebar">
+      <div class="brand"><div class="brand-logo">🚗</div><div><b>RideShare</b><small>Lite</small></div></div>
+      <div class="menu-label">MAIN MENU</div>
+      <nav class="nav">
+        <a data-page="dashboard" href="index.html"><span class="nav-icon">▦</span>Dashboard</a>
+        <a data-page="users" href="users.html"><span class="nav-icon">👥</span>Users</a>
+        <a data-page="riders" href="riders.html"><span class="nav-icon">🧑</span>Riders</a>
+        <a data-page="rides" href="rides.html"><span class="nav-icon">🚗</span>Ride Offers</a>
+        <a data-page="requests" href="requests.html"><span class="nav-icon">📋</span>Ride Requests</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="menu-label">SYSTEM</div><a class="nav" href="#"><span class="nav-icon">⚙</span>Settings</a></div>
+    </aside><div class="main">
+<header class="topbar"><div class="search">⌕<input placeholder="Search anything..."></div><div class="top-right"><button class="icon-btn">🔔<i class="dot"></i></button><div class="profile"><div class="avatar">A</div><div><b>Admin</b><small>Administrator</small></div></div></div></header>
+<main class="content">
+<div class="page-head"><div><p class="eyebrow">CARPOOL OPERATIONS</p><h1>Ride Offers</h1><p>Create, monitor and manage driver ride offers.</p></div><button class="btn btn-primary" data-open="rideModal">＋ Create Ride</button></div>
+<section class="stats"><div class="stat"><div class="stat-icon purple">🚗</div><h2 id="rideTotal">--</h2><p>Total Rides</p></div><div class="stat"><div class="stat-icon green">✓</div><h2 id="rideAvail">--</h2><p>Available</p></div><div class="stat"><div class="stat-icon orange">●</div><h2 id="rideFull">--</h2><p>Full</p></div><div class="stat"><div class="stat-icon blue">✓</div><h2 id="rideDone">--</h2><p>Completed</p></div></section>
+<div id="rideGrid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:17px"></div>
+</main><footer><b>🚗 RideShareLite</b><span>Office & College Carpool Matching Platform</span><span>© 2026</span></footer></div></div>
+<div class="modal-backdrop" id="rideModal"><div class="modal"><div class="modal-head"><h3 id="rideModalTitle">Create Ride</h3><button class="close" data-close="rideModal">×</button></div><form id="rideForm"><div class="modal-body"><input type="hidden" id="rideId"><div class="form-grid"><div class="field full"><label>Driver</label><select id="rideDriver" required></select></div><div class="field"><label>Origin</label><input id="rideOrigin" required></div><div class="field"><label>Destination</label><input id="rideDestination" required></div><div class="field"><label>Departure</label><input id="rideDeparture" type="datetime-local" required></div><div class="field"><label>Available Seats</label><input id="rideSeats" type="number" min="1" required></div><div class="field full"><label>Status</label><select id="rideStatus" required><option>AVAILABLE</option><option>FULL</option><option>COMPLETED</option><option>CANCELLED</option></select></div></div></div><div class="modal-foot"><button type="button" class="btn btn-light" data-close="rideModal">Cancel</button><button class="btn btn-primary">Save Ride</button></div></form></div></div>
+<div id="toastContainer" class="toast-container"></div><script src="script.js"></script></body></html>
